@@ -13,13 +13,14 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     background-color: #FFF;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 
@@ -293,18 +294,18 @@ HOT IT WORKS
     background-color: #f4f4f4;
 }
 
-
-/*.steps-box {
-
-}*/
+.steps-box {
+    margin-top: 30px;
+}
 
 .steps-box:first-child {
     text-align: right;
     padding-right: 3%;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 .steps-box:last-child {
+    text-align: left;
     padding-left: 3%;
     margin-top: 70px;
 }
