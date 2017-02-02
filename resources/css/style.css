@@ -205,7 +205,7 @@ header {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -214,6 +214,17 @@ header {
     float: left;
     margin-top: 20px;
 }
+
+.logo-black {
+    display: none;
+    width: auto;
+    height: 50px;
+    float: left;
+    margin: 5px 0;
+}
+
+
+/* Main navi */
 
 .main-nav {
     float: right;
@@ -239,6 +250,35 @@ header {
 
 .main-nav li a:hover, .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
+}
+
+
+/* Sticky navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #ebebeb;
+}
+
+.main-nav {
+    margin-top: 18px;
+}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.sticky .logo-black {
+    display: block;
 }
 
 
@@ -282,7 +322,7 @@ MEALS
     width: 100%;
     height: auto;
     -webkit-transform: scale(1.15);
-            transform: scale(1.15);
+    transform: scale(1.15);
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
@@ -292,7 +332,7 @@ MEALS
 .meal-photo img:hover {
     opacity: 1;
     -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 
