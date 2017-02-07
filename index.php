@@ -303,23 +303,46 @@
 
           <div class="map-box">
                <div class="map"></div>
-               <div class="form-box">
+               <div class="form-box" id="form">
                     <div class="row">
                          <h2>We're happy to hear from you</h2>
                     </div>
                     <div class="row">
-                         <form action="#" method="post" class="contact-form">
+                         <form action="mailer.php" method="post" class="contact-form">
+
+                              <div class="row">
+
+                              <?php
+
+                              if(isset($_GET['success'])) {
+                                    if ($_GET["success"] == 1) {
+                                      echo
+                                      '<div class="form-messages success">
+                                      Thank you! Your message has been sent!
+                                      </div>';
+                                    }
+
+                                    if ($_GET["success"] == -1) {
+                                      echo
+                                      '<div class="form-messages error">
+                                      Oops! Something went wrong. Please try again!
+                                      </div>';
+                                    }
+                                }
+                                   ?>
+                              </div>
+
                               <div class="row">
                                    <div class="col span-1-of-3">
                                         <label for="name">Name</label>
                                    </div>
-                                   <div class="col span-2-of-3"><input type="text" id="name" placeholder="Your name" required></div>
+                                   <div class="col span-2-of-3"><input type="text" id="name" name="name" placeholder="Your name" required></div>
                               </div>
                               <div class="row">
                                    <div class="col span-1-of-3">
                                         <label for="email">Email</label>
                                    </div>
-                                   <div class="col span-2-of-3"><input type="email" id="email" placeholder="Your email" required></div>
+                                   <div class="col span-2-of-3"><input type="email" id="email" name="email" placeholder="Your email" required></div>
                               </div>
                               <div class="row">
                                    <div class="col span-1-of-3">
@@ -397,8 +420,10 @@
           <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
           <!-- http://imakewebthings.com/waypoints/ -->
           <script src="vendors/js/jquery.waypoints.min.js"></script>
+          <!-- https://developers.google.com/maps/documentation/javascript/ -->
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM_W3XOuVTLcmaOlOkRH7cz0wsjB3qqOY&callback=initMap"type="text/javascript"></script>
           <!-- https://github.com/hpneo/gmaps -->
-          <script src="http://maps.google.com/maps/api/js"></script>
+          <!-- <script src="http://maps.google.com/maps/api/js"></script> -->
           <!-- local -->
           <script src="resources/js/script.js"></script>
           <!-- https://hpneo.github.io/gmaps/examples.html -->
