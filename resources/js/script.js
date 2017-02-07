@@ -80,4 +80,21 @@ $(document).ready(function() {
         }
     });
 
+    /* Maps */
+    var map = new GMaps({
+        div: '.map',
+        lat: 20.6745004,
+        lng: -103.3578161,
+        zoom: 15
+    });
+
+    map.addMarker({
+        lat: 20.6745004,
+        lng: -103.3778161,
+        title: 'Guadalajara',
+        infoWindow: {
+            content: '<p>Our GDL HQ</p>'
+        }
+    });
+
 });
