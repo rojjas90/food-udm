@@ -386,7 +386,6 @@
                </div>
           </div>
 
-
           <footer>
                <div class="row">
                     <div class="col span-1-of-2">
